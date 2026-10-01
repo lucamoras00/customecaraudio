@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a10">
+  <meta name="description" content="Caorle Car Meet — iscrizioni al raduno del 20 febbraio 2027 a Caorle.">
+  <title>Caorle Car Meet | Iscrizioni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Caorle Car Meet home"><span class="brand-mark">CCM</span><span>CAORLE <b>CAR MEET</b></span></a>
+    <a class="top-cta" href="#iscrizione">ISCRIVITI <span>↗</span></a>
+  </header>
 
+  <main>
+    <section class="hero" id="home">
+      <img class="hero-image" src="/caorle-car-meet-hero.jpeg" alt="Grafica Caorle Car Meet con auto custom e impianti car audio">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> RADUNO • CAORLE • 2027</div>
+        <h1>CAORLE<br><em>CAR MEET</em></h1>
+        <p class="hero-sub">MOTORI ACCESI. MUSICA AL MASSIMO.</p>
+        <div class="hero-meta"><span>📍 CAORLE</span><span>◆</span><span>20 FEBBRAIO 2027</span></div>
+        <a class="button button-primary" href="#iscrizione">PRENOTA IL TUO POSTO <span>→</span></a>
+      </div>
+      <div class="hero-bottom"><span>MEET • CUSTOM • CAR AUDIO</span><span>SCROLL PER ISCRIVERTI ↓</span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <div><p class="section-kicker">IL TUO VEICOLO. LA TUA PASSIONE.</p><h2>ENTRA NEL<br><span>MEET.</span></h2></div>
+      <p class="intro-text">Un appuntamento dedicato a chi vive il mondo dei motori, delle personalizzazioni e del car audio. Scegli la categoria, compila i tuoi dati e completa l'iscrizione online.</p>
+    </section>
+
+    <section class="registration section-wrap" id="iscrizione">
+      <div class="section-heading">
+        <div><p class="section-kicker">ISCRIZIONI APERTE</p><h2>REGISTRA <span>IL TUO MEZZO</span></h2></div>
+        <div class="date-chip"><small>DATA EVENTO</small><strong>20 FEB 2027</strong><small>CAORLE</small></div>
+      </div>
+
+      <form id="registration-form" class="glass-panel">
+        <div class="form-section-title"><span class="step">01</span><div><h3>SCEGLI LA CATEGORIA</h3><p>Seleziona la tipologia di partecipazione.</p></div></div>
+        <div class="category-grid">
+          <label class="category-card selected"><input type="radio" name="category" value="Moto" data-price="5" checked><span class="category-icon">🏍</span><span class="category-name">MOTO</span><strong>5 €</strong><small>Partecipazione moto</small></label>
+          <label class="category-card"><input type="radio" name="category" value="Custom" data-price="15"><span class="category-icon">🏎</span><span class="category-name">CUSTOM</span><strong>15 €</strong><small>Auto personalizzate</small></label>
+          <label class="category-card"><input type="radio" name="category" value="Car Audio" data-price="25"><span class="category-icon">🔊</span><span class="category-name">CAR AUDIO</span><strong>25 €</strong><small>Impianti audio</small></label>
+        </div>
+
+        <div class="form-section-title second"><span class="step">02</span><div><h3>I TUOI DATI</h3><p>Inserisci i dati del partecipante.</p></div></div>
+        <div class="fields-grid">
+          <label class="field"><span>Nome</span><input name="firstName" autocomplete="given-name" placeholder="Il tuo nome" required maxlength="80"></label>
+          <label class="field"><span>Cognome</span><input name="lastName" autocomplete="family-name" placeholder="Il tuo cognome" required maxlength="80"></label>
+          <label class="field"><span>Telefono</span><input name="phone" type="tel" autocomplete="tel" placeholder="+39 ..." required maxlength="30"></label>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="nome@email.it" required maxlength="160"></label>
+          <label class="field field-wide"><span>Marca e modello del veicolo</span><input name="vehicle" placeholder="Es. BMW E36, Yamaha MT-07..." required maxlength="120"></label>
+        </div>
+
+        <div class="form-section-title second"><span class="step">03</span><div><h3>LA FOTO DEL TUO VEICOLO</h3><p>Carica una foto da inviare agli organizzatori via email.</p></div></div>
+        <label class="upload-zone" for="vehicle-photo"><span class="upload-symbol">＋</span><strong id="upload-title">SCEGLI LA FOTO</strong><span id="upload-hint">JPG, PNG o WEBP • massimo 8 MB</span><input id="vehicle-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+
+        <label class="consent"><input type="checkbox" name="privacy" required><span>Ho letto e accetto l'<a href="/privacy.html" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei dati per la gestione dell'iscrizione.</span></label>
+        <div class="checkout-row"><div><small>QUOTA DI ISCRIZIONE</small><strong id="total">5,00 €</strong><span id="price-note">Categoria: Moto</span></div><button class="button button-primary submit-button" id="submit-button" type="submit">CONTINUA CON PAYPAL <span>→</span></button></div>
+        <p class="form-note" id="form-message" role="status" aria-live="polite">L'iscrizione sarà confermata dopo la verifica del pagamento.</p>
+      </form>
+    </section>
+
+    <section class="event-strip"><div><small>PROSSIMO APPUNTAMENTO</small><strong>CAORLE CAR MEET</strong></div><div class="strip-date">20 <span>FEB</span> 2027</div><a href="#iscrizione">ISCRIVITI ORA ↗</a></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-mark">CCM</span><span>CAORLE <b>CAR MEET</b></span></a><p>© 2027 Caorle Car Meet · Per informazioni: <a href="mailto:customecaraudioevents@gmail.com">customecaraudioevents@gmail.com</a></p><a href="/privacy.html">Privacy</a></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
